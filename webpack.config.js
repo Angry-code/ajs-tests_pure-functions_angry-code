@@ -2,6 +2,7 @@
 const path = require('path');
 const HtmlWebPackPlugin = require('html-webpack-plugin');
 
+
 module.exports = {
   output: {
     path: path.resolve(__dirname, 'dist'),
@@ -11,6 +12,7 @@ module.exports = {
       {
         test: /\.js$/,
         exclude: /node_modules/,
+        type: "javascript/auto",
         use: {
           loader: 'babel-loader',
         },
